@@ -13,7 +13,6 @@ public class MGame {
     private ArrayList<Die> dice;
     private int roundCnt;
 
-    // constructor
     public MGame() {
         this.board = new Board();
 
@@ -26,7 +25,7 @@ public class MGame {
         this.roundCnt = 0;
     }
 
-    // methods
+    // to initiate the round of game
     private void playRound() {
         System.out.println("------------------ Round: " + (this.roundCnt + 1) + " ------------------");
         for (Player player : this.players) {
@@ -43,10 +42,12 @@ public class MGame {
         }
     }
 
+    // to add new player into the game
     public void addNewPlayer(String name, Board board, ArrayList<Die> dice, Square square) {
         this.players.add(new Player(name, board, dice, square));
     }
 
+    // to output log and check that player state is correct
     public void checkReady() {
         System.out.println("------------------ WELCOME! ------------------");
         for (Player player : this.players) {
@@ -54,7 +55,6 @@ public class MGame {
         }
     }
 
-    // getter
     public Board getBoard() {
         return this.board;
     }

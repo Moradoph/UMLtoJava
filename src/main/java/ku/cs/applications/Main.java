@@ -8,6 +8,7 @@ package ku.cs.applications;
 import ku.cs.models.Board;
 import ku.cs.models.Die;
 import ku.cs.models.MGame;
+import ku.cs.models.Square;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class Main {
         };
 
         for (String sname : squareNames) {
-            board.addSquare(sname);
+            board.addSquare(new Square(sname));
         }
 
         String firstSquare = squareNames[0];

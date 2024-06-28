@@ -10,18 +10,14 @@ import java.util.ArrayList;
 public class Board {
     private ArrayList<Square> squareList;
 
-    // constructor
     public Board() {
         this.squareList = new ArrayList<>();
     }
 
-    // methods
-    public void addSquare(String name) {
-        Square square = new Square(name);
+    public void addSquare(Square square) {
         this.squareList.add(square);
     }
 
-    // getter
     public Square getSquare(Square oldLoc, int fvTot) {
 
         int newLocIndex = 0;

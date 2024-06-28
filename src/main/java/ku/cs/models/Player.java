@@ -13,7 +13,6 @@ public class Player {
     private Board board;
     private ArrayList<Die> dice;
 
-    // constructor
     public Player(String name, Board board, ArrayList<Die> dice, Square square) {
         this.name = name;
         this.board = board;
@@ -21,7 +20,7 @@ public class Player {
         this.piece = new Piece(square);
     }
 
-    // method
+    // to call roll() and sum up the value then change the current piece's position
     public void takeTurn() {
         int fvTot = 0;
         for (Die die : dice) {
@@ -35,7 +34,6 @@ public class Player {
         piece.setLocation(newLoc);
     }
 
-    // getter
     public Piece getPiece() {
         return piece;
     }

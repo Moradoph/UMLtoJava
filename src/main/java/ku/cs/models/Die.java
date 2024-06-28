@@ -11,18 +11,16 @@ public class Die {
     private int faceValue;
     private final int MAX_VALUE = 6;
 
-    // constructor
     public Die() {
         this.faceValue = 1;
     }
 
-    // methods
+    // to roll dices or to random the faceValue of dices
     public void roll() {
         Random rand = new Random();
         faceValue = rand.nextInt(MAX_VALUE) + 1;
     }
 
-    // getter
     public int getFaceValue() {
         return this.faceValue;
     }
